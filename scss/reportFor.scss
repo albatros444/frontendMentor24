@@ -1,0 +1,48 @@
+.reportFor {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  border-radius: 15px;
+  background-color: hsl(235, 46%, 20%);
+
+  .nameAndAva {
+    background-color: hsl(246, 80%, 60%);
+    height: 355px;
+    padding: 34px 32px;
+    border-radius: 15px;
+
+    img {
+      width: 84px;
+      border: 3px solid white;
+      border-radius: 50%;
+      margin-bottom: 35px;
+      margin-left: -3px;
+    }
+    .for {
+      margin-bottom: 3px;
+      font-size: 15px;
+      color: hsl(236, 100%, 87%);
+    }
+    .name {
+      font-size: 40px;
+      font-weight: 300;
+      color: white;
+    }
+  }
+  .periods {
+    padding: 26px 32px;
+    color: hsl(235, 45%, 61%);
+    cursor: pointer;
+    .period {
+      transition: all 0.13s ease-in-out;
+      &:hover {
+        color: white;
+      }
+    }
+    .active {
+      color: white;
+    }
+    div {
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.activity {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  border-radius: 15px;
+  background: no-repeat right 17px top -6px;
+  .body {
+    height: 200px;
+    border-radius: 13px;
+    padding: 29px 30px;
+    background-color: hsl(235, 46%, 20%);
+    color: white;
+    cursor: pointer;
+    transition: all 0.13s ease-in-out;
+    &:hover {
+      background-color: hsl(235, 36%, 35%);
+    }
+    .box1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+      .threeDots {
+        fill: #bbc0ff;
+        cursor: pointer;
+        &:hover {
+          fill: white;
+        }
+      }
+    }
+    .activityHours {
+      font-size: 55px;
+      font-weight: 300;
+      margin-bottom: 9px;
+    }
+    .activityLast {
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      color: hsl(236, 100%, 87%);
+    }
+  }
+}
+.activity-work {
+  background-color: hsl(15, 100%, 70%);
+}
+.activity-play {
+  background-color: hsl(195, 74%, 62%);
+}
+.activity-study {
+  background-color: hsl(348, 100%, 68%);
+}
+.activity-exercise {
+  background-color: hsl(145, 58%, 55%);
+}
+.activity-social {
+  background-color: hsl(264, 64%, 52%);
+}
+.activity-selfCare {
+  background-color: hsl(43, 84%, 65%);
+}

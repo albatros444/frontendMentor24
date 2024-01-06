@@ -14,7 +14,7 @@ body {
   padding: 0;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
-  /* //position: relative; ///for footer with absolute position --> */
+  position: relative;
 }
 body h1,
 body h2,
@@ -46,9 +46,218 @@ a {
   margin: auto;
   font-size: 11px;
   text-align: center;
+  color: white;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.reportFor {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  border-radius: 15px;
+  background-color: hsl(235, 46%, 20%);
+}
+.reportFor .nameAndAva {
+  background-color: hsl(246, 80%, 60%);
+  height: 355px;
+  padding: 34px 32px;
+  border-radius: 15px;
+}
+.reportFor .nameAndAva img {
+  width: 84px;
+  border: 3px solid white;
+  border-radius: 50%;
+  margin-bottom: 35px;
+  margin-left: -3px;
+}
+.reportFor .nameAndAva .for {
+  margin-bottom: 3px;
+  font-size: 15px;
+  color: hsl(236, 100%, 87%);
+}
+.reportFor .nameAndAva .name {
+  font-size: 40px;
+  font-weight: 300;
+  color: white;
+}
+.reportFor .periods {
+  padding: 26px 32px;
+  color: hsl(235, 45%, 61%);
+  cursor: pointer;
+}
+.reportFor .periods .period {
+  transition: all 0.13s ease-in-out;
+}
+.reportFor .periods .period:hover {
+  color: white;
+}
+.reportFor .periods .active {
+  color: white;
+}
+.reportFor .periods div {
+  margin-bottom: 20px;
+}
+
+.activity {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  border-radius: 15px;
+  background: no-repeat right 17px top -6px;
+}
+.activity .body {
+  height: 200px;
+  border-radius: 13px;
+  padding: 29px 30px;
+  background-color: hsl(235, 46%, 20%);
+  color: white;
+  cursor: pointer;
+  transition: all 0.13s ease-in-out;
+}
+.activity .body:hover {
+  background-color: hsl(235, 36%, 35%);
+}
+.activity .body .box1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.activity .body .box1 .threeDots {
+  fill: #bbc0ff;
+  cursor: pointer;
+}
+.activity .body .box1 .threeDots:hover {
+  fill: white;
+}
+.activity .body .activityHours {
+  font-size: 55px;
+  font-weight: 300;
+  margin-bottom: 9px;
+}
+.activity .body .activityLast {
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: hsl(236, 100%, 87%);
+}
+
+.activity-work {
+  background-color: hsl(15, 100%, 70%);
+}
+
+.activity-play {
+  background-color: hsl(195, 74%, 62%);
+}
+
+.activity-study {
+  background-color: hsl(348, 100%, 68%);
+}
+
+.activity-exercise {
+  background-color: hsl(145, 58%, 55%);
+}
+
+.activity-social {
+  background-color: hsl(264, 64%, 52%);
+}
+
+.activity-selfCare {
+  background-color: hsl(43, 84%, 65%);
+}
+
+.background {
+  background-color: hsl(226, 43%, 10%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.background .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 255px);
+  grid-template-rows: 245px 245px;
+  gap: 30px;
+  margin: 24px;
+}
+
+@media screen and (max-width: 850px) {
+  .background {
+    align-items: start;
+    height: 100%;
+  }
+  .background .grid {
+    grid-template-columns: minmax(300px, 450px);
+    grid-template-rows: 1fr repeat(6, 160px);
+    gap: 24px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .reportFor .nameAndAva {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 133px;
+    padding: 0;
+  }
+  .reportFor .nameAndAva img {
+    height: 70px;
+    width: 70px;
+    margin-bottom: 0;
+    margin-left: 29px;
+    margin-right: 18px;
+  }
+  .reportFor .nameAndAva .for {
+    margin-bottom: 5px;
+  }
+  .reportFor .nameAndAva .name {
+    font-size: 24px;
+  }
+  .reportFor .periods {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 19px;
+  }
+  .reportFor .periods div {
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    margin-bottom: 0;
+  }
+  .activity .body {
+    height: 122px;
+    padding: 28px 24px;
+  }
+  .activity .body .box1 {
+    margin-bottom: 7px;
+  }
+  .activity .body .box1 p {
+    letter-spacing: 0.02em;
+  }
+  .activity .body .box2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .activity .body .box2 .activityHours {
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 1150px) and (min-width: 851px) {
+  .background .grid {
+    grid-template-columns: repeat(3, 255px);
+    grid-template-rows: repeat(3, 255px);
+    gap: 15px;
+  }
+  .reportFor {
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+  .reportFor .nameAndAva {
+    height: 455px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

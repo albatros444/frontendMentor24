@@ -1,2 +1,20 @@
 @import "globals";
 @import "footer";
+@import "reportFor";
+@import "activity";
+
+.background {
+  background-color: hsl(226, 43%, 10%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 255px);
+    grid-template-rows: 245px 245px;
+    gap: 30px;
+    margin: 24px;
+  }
+}
+@import "mediaQs";
